@@ -2,13 +2,12 @@
 date = "2015-08-08T19:37:59-07:00"
 title = "To the cloud!"
 description: "welcome to the new cloudnativejava.io blog"
-date: "2014-03-27"
 categories:
     - "first"
     - "welcome"
 +++
 
-## Welcome 
+## Welcome
 
 This is the tale of [a small book for you and for me](http://cloudnativejava.io).
 
