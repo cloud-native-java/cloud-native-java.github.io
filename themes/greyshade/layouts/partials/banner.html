@@ -1,0 +1,15 @@
+{{ if and ($.Site.Params.twitter_user) ($.Site.Params.twitter_tweet_count) }}
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href='http://twitter.com/{{ $.Site.Params.twitter_user }}'>{{ $.Site.Params.twitter_user }}</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="{{ $.Site.BaseURL }}/js/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('{{ $.Site.Params.twitter_user }}', {{ $.Site.Params.twitter_tweet_count }}, {{ $.Site.Params.twitter_show_replies }});
+	})(jQuery);
+</script>
+{{ end }}

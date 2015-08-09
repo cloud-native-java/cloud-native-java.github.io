@@ -1,0 +1,11 @@
+{{ if .Params.categories }}
+{{ $len := .Params.categories|len }}
+{{ range $idx, $category := .Params.categories }}
+	{{ $i := add $idx 1 }}
+	{{ if lt $i $len }}
+		<a href="{{ $.Site.BaseURL }}/categories/{{ $category | urlize }}"> {{ $category }} </a>,
+	{{ else }}
+	    <a href="{{ $.Site.BaseURL }}/categories/{{ $category | urlize }}"> {{ $category }} </a>
+	{{ end }}
+{{ end }}
+{{ end }}

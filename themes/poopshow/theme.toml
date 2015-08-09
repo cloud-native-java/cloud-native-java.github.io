@@ -1,0 +1,13 @@
+name = "poopshow"
+description = "the theme formerly know as s***show"
+license = "MIT"
+licenselink = "http://opensource.org/licenses/MIT"
+homepage = "http://github.com/esell/poopshow"
+source_repo = "http://github.com/esell/poopshow"
+tags = ["blog"]
+features = ["blog", ]
+min_version = 0.12
+
+[author]
+    name = "esell"
+    homepage = "http://github.com/esell/"

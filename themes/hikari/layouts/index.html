@@ -1,0 +1,18 @@
+{{ partial "head" . }}
+<body>
+    
+    {{ partial "off-canvas" . }}
+
+    <div class="site-wrapper">
+        {{ partial "header" . }}
+        
+        {{ partial "post-list" . }}
+        {{ partial "pagination" . }}        
+    
+        {{ partial "footer" . }}
+    </div>
+    
+    {{ partial "js" . }}
+    
+</body>
+</html>

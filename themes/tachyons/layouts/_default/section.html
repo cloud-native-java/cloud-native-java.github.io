@@ -1,0 +1,18 @@
+{{ partial "header.html" . }}
+<body lang="en">
+
+<main class="pal">
+  <div>
+   <h1 class="ttu fw4 f6 lt-silver">{{ .Title }}</h1>
+            {{ range .Data.Pages.GroupByDate "2006" }}
+            <h1 class="ttu f4 blue">{{ .Key }}</h1>
+                <ul class="list pnl">
+                    {{ range .Pages }}
+                        {{ .Render "li"}}
+                    {{ end }}
+                </ul>
+            {{ end }}
+  </div>
+</main>
+
+{{ partial "footer.html" . }}

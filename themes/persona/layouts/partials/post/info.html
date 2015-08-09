@@ -1,0 +1,21 @@
+{{ $author := .Site.Params.Authors.default }}{{ with .Params.author }}{{ $author := . }}{{ end }}
+{{ $authorinfo := index .Site.Params.Authors $author }}
+                <aside class="row post_info">
+                  <div class="col-md-12">
+                      <ul class="vcard_area">
+                          <li>By <a href="{{ $authorinfo.Link }}" title="{{ $author }}">{{ $author }}</a></li>
+                          <!-- Date/Time -->
+                          {{ if .Site.Params.DateFormat }}
+                          <li><time property="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format .Site.Params.DateFormat }}</time></li>
+                          {{ else }}
+                          <li><time property="datePublished" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan, 2006" }}</time></li>
+                          {{ end }}
+                          <!-- Tags -->
+                          {{ if isset .Params "tags" }}<li class="tags" property="keywords">{{ range .Params.tags }}<a href="/tags/{{ . | urlize }}">{{ . }}</a>{{ end }}</li>{{ end }}
+                          <!-- Comments -->
+                          <li><a href="{{ .Permalink }}#comments_thread" property="commentCount">33 Comments</a></li>
+                          <!-- Edit link -->
+                          {{ with .Site.Params.edit_link_url }}<li><a href="{{ . }}{{ $.Source.File.Path }}" title="Edit" target="_blank"><i class="edit_post"></i></a></li>{{ end }}
+                      </ul>
+                  </div>
+                </aside>

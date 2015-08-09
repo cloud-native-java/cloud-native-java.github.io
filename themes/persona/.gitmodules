@@ -1,0 +1,9 @@
+[submodule "vendor/lightslider"]
+	path = vendor/lightslider
+	url = https://github.com/sachinchoolur/lightslider.git
+[submodule "vendor/lightGallery"]
+	path = vendor/lightgallery
+	url = https://github.com/sachinchoolur/lightGallery.git
+[submodule "vendor/fontawesome"]
+	path = vendor/fontawesome
+	url = https://github.com/FortAwesome/Font-Awesome.git

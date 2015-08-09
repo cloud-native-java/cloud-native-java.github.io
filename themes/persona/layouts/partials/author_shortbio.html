@@ -1,0 +1,19 @@
+{{ $author := .Site.Params.Authors.default }}{{ with .Params.author }}{{ $author := . }}{{ end }}
+{{ $authorinfo := index .Site.Params.Authors $author }}
+            <div class="home_single_post">
+              <div class="post_content_area">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+                    <div class="single_post_content">
+                      <div class="post_author_widgets">
+                        <img src="{{ $authorinfo.Avatar }}" alt=""/>
+                          <div>
+                            <h2><a href="{{ $authorinfo.Link }}">{{ $authorinfo.Name }}</a></h2>
+                            <p>{{ $authorinfo.ShortBio | safeHTML }}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>

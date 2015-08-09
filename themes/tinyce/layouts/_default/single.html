@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+<body id="single">
+  {{ partial "header.html" . }}
+
+  <section class="post-symbol {{ .Params.color }}">
+    <i class="symbol fa fa-{{ .Params.icon }}"></i>
+    <p class="description">{{ .Description }}</p>
+  </section>
+
+  <div id="content-container">
+    <div class="post">
+      <h1>{{ .Title }}</h1>
+      <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+      <p class="post-content">{{ .Content }}</p>
+    </div>
+
+    {{ template "_internal/disqus.html" . }}
+  </div>
+</body>
+</html>

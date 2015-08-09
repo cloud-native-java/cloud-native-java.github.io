@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+{{ if .Site.LanguageCode }}
+<html lang="{{ .Site.LanguageCode }}">
+{{ else }}
+<html>
+{{ end }}
+<head>
+	<meta charset="utf-8">
+	<title>{{ if and (.IsPage) (.Title) }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
+	<meta name="author" content="{{ .Site.Author }}">
+
+	{{ $description := .Description }}
+	{{ if $description }} {{ $description := .Summary }} {{ end }}
+	<meta name="description" content="{{ $description }}">
+	{{ if .Keywords }}<meta name="keywords" content="{{ .Keywords }}">{{ end }}
+
+	<!-- http://t.co/dKP3o1e -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ if isset .Site.Params "subscribe_rss" }}
+	<link href='{{ index .Site.Params "subscribe_rss" }}' rel="alternate" title="{{ .Site.Title }}" type="application/atom+xml">
+	{{ end }}
+	<link rel="canonical" href="{{ .Permalink }}">
+	<link href="{{ .Site.BaseURL }}/favicon.png" rel="shortcut icon">
+	<link href="{{ .Site.BaseURL }}/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<link href="{{ .Site.BaseURL }}/css/font-awesome.min.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<link href='http://fonts.googleapis.com/css?family=Nunito:400,300,700' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	{{ partial "custom/head.html" . }}
+  {{ partial "google_analytics.html" . }}
+</head>

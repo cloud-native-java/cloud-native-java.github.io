@@ -1,0 +1,17 @@
+<section class="post">
+    <header class="post-header">
+        <p class="post-infos">
+            <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "02 Jan 2006, 15:04" }}</time>
+            {{ .Render "tags" }}
+        </p>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }} {{ if .Draft }} (draft) {{end}}</a></h2>
+    </header>
+    <div class="post-description">
+    {{ if eq .Section "links" }}
+       {{ .Content }}
+    {{else}}
+      {{ .Summary }}
+      {{ if .Truncated }}<br /><a class="readmore" href="{{ .RelPermalink }}"><span class="genericon genericon-reply"></span> Read more…</a>{{ end }}
+    {{end}}
+    </div>
+</section>

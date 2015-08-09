@@ -1,0 +1,6 @@
+author = "Marlon Cabrera Oliveira"
+description = "Hugo theme using tachyons.io css3 framework & geomicons.com icons"
+license = "MIT"
+name = "tachyons"
+source_repo = "https://github.com/marloncabrera/tachyons.git"
+tags = ["blog", "personal"]

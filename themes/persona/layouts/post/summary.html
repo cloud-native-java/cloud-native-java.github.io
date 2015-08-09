@@ -1,0 +1,15 @@
+      <article class="home_single_post gallery_post_type" typeof="BlogPosting">
+{{ partial "post/image_area.html" . }}
+        <div class="post_content_area">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+              <div class="single_post_summary" property="articleBody">
+                <header><h2><a href="{{ .Permalink }}" property="headline">{{ .Title }}</a></h2></header>
+                <p>{{ .Summary }}</p>
+                <footer><ul class="pager"><li class="next"><a href="{{ .Permalink }}">Read more »</a></li></u></footer>
+              </div>
+              {{ partial "post/info.html" . }}
+            </div>
+          </div>
+        </div>
+      </article>

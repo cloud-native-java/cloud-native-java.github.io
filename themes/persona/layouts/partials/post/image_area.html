@@ -1,0 +1,14 @@
+        <div class="post_image_area">
+          {{ if isset .Params "banner" }}
+          <div class="large"><img src="{{ .Params.banner.src }}" alt="{{ .Params.banner.alt }}" /></div>
+          {{ end }}
+          {{ if isset .Params "thumbnails" }}
+          <div class="thumbnails">
+            <ul>
+            {{ range $thumbnail := .Params.thumbnails }}
+              <li><img src="{{ $thumbnail.src }}" alt="{{ $thumbnail.alt }}" /></li>
+            {{ end }}
+            </ul>
+          </div>
+          {{ end }}
+        </div>

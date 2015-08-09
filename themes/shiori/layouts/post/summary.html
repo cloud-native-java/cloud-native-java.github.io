@@ -1,0 +1,10 @@
+<div class="post-header-home">
+  <h1 class="post-title-home">
+    <a href="{{ .Site.BaseURL }}{{ .RelPermalink }}">{{ .Title }}</a>
+  </h1>
+  {{ partial "post-header-home.html" . }}
+</div>
+<div class="post-excerpt-home">
+  {{ .Summary }}
+  <p class="text-right"><a href="{{ .Site.BaseURL }}{{ .RelPermalink }}">Continue Reading &rarr;</a></p>
+</div>

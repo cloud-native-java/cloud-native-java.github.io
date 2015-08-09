@@ -1,0 +1,20 @@
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="{{ .Site.Params.AuthorName }}" />
+
+    <meta name="description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+
+    <meta name="twitter:card" content="summary">
+    {{ with .Site.Params.twitter }}<meta name="twitter:site" content="{{ . }}" />{{ end }}
+    <meta name="twitter:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
+    <meta name="twitter:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ .Title }} &middot; {{ .Site.Title }}">
+    <meta property="og:description" content="{{ if .IsNode }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ else }}{{ with .Description }}{{ . }}{{ end }}{{ end }}">
+
+    <title>{{ .Title }} &middot; {{ .Site.Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+
+{{ partial "meta.extra.html" . }}

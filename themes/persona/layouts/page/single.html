@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+<body vocab="http://schema.org/" typeof="WebPage">
+{{ partial "navbar.html" . }}
+<div class="main_content_area">
+    <div id="expand_content_menu"><span class="icon icon-bars"></span></div>
+    <div id="body_hover"></div>
+{{ partial "profile_heading.html" . }}
+    <section class="home_page_post_area single_page_post_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="home_single_post">
+{{ partial "post/image_area.html" . }}
+{{ partial "page/single_content_area.html" . }}
+{{ partial "comment_area.html" . }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+ </div>
+{{ partial "footer.html" . }}

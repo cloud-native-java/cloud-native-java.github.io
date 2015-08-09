@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+<body vocab="http://schema.org/" typeof="WebPage">
+{{ partial "navbar.html" . }}
+  <div class="main_content_area">
+    <div id="expand_content_menu"><span class="icon icon-bars"></span></div>
+    <div id="body_hover"></div>
+{{ partial "profile_heading.html" . }}
+    <section class="home_page_post_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+              {{ $paginator := .Paginate .Data.Pages }}
+              {{ range $paginator.Pages }}
+                  {{ .Render "list" }}
+              {{ end }}
+              {{ template "theme/partials/pagination.html" . }}
+        </div>
+      </div>
+    </section>
+  </div>
+{{ partial "footer.html" . }}

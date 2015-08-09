@@ -1,0 +1,15 @@
+              <article class="post_content_area">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+                    <section class="single_post_content">
+                      <h2 property="headline">{{ .Title }}</h2>
+                      {{ if .Description }}
+                      <h3 property="alternativeHeadline"><small>{{ .Description }}</small></h3>
+                      {{ end }}
+                      <hr>
+                      {{ .Content }}
+                    </section>
+                    {{ partial "post/info.html" . }}
+                  </div>
+                </div>
+              </article>

@@ -1,0 +1,39 @@
+html, body {
+	font-family: Cambria, Georgia, 'Microsoft Jhenghei', 'Hiragino Sans GB', 'Microsoft YaHei', 'Times New Roman', serif;
+}
+
+/*a {
+  color: #ccc;
+  border-bottom-style: dotted;
+}
+*/
+#header .uk-float-left a {
+  color: rgb(85, 85, 85);
+  border-bottom-style: none;
+}
+
+#header .uk-float-left a:hover {
+  border-bottom-style: none;
+}
+
+.uk-article-title, .uk-article-lead {
+	color: rgb(85, 85, 85);
+}
+
+.uk-article-title a {
+	font-size: 23px;
+}
+
+.uk-article {
+	font-size: 16px;
+}
+
+.uk-article p {
+	/*font-size: 16px;*/
+	/*line-height: 1.8;*/
+}
+
+:not(pre) > code {
+  padding: 1px 3px 1px 3px;
+	background-color: #f5f5f5;
+}

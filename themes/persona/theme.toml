@@ -1,0 +1,15 @@
+name = "Persona"
+license = "MIT"
+source_repo = ""
+description = "A clean, well-readable blog theme."
+tags = ["blog", "company"]
+features = ["blog" ]
+
+[author]
+  name = "aries1980"
+  email = "i.am@janosfeher.com"
+  url = "http://janosfeher.com"
+
+[original]
+  author = "Mario Maruffi"
+  url = "http://pixelcoder.net/persona/"

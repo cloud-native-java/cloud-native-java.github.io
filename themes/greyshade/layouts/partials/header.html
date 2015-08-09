@@ -1,0 +1,68 @@
+<div class="profilepic">
+	{{ if $.Site.Params.email_md5 }}
+	<img src='http://www.gravatar.com/avatar/{{ $.Site.Params.email_md5 }}?s=160' alt="Profile Picture" style="width: 160px;" />
+	{{ else }}
+	{{ if $.Site.Author.email }}
+	<script src="{{ .Site.BaseURL }}/js/md5.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.profilepic').append("<img src='http://www.gravatar.com/avatar/" + MD5('{{ $.Site.Author.email | lower }}') + "?s=160' alt='Profile Picture' style='width: 160px;' />");
+		});
+	</script>
+	{{ end }}
+	{{ end }}
+</div>
+{{ partial "custom/header.html" . }}
+<nav id="main-nav">{{ partial "navigation.html" . }}</nav>
+<nav id="sub-nav">
+	<div class="social">
+		{{ if $.Site.Author.email }}
+			<a class="email" href='mailto:{{ $.Site.Author.email }}' title="Email">Email</a>
+		{{ end }}
+		{{ if $.Site.Params.facebook_user }}
+			<a class="facebook" href='http://www.facebook.com/{{ $.Site.Params.facebook_user }}' title="Facebook">Facebook</a>
+		{{ end }}
+		{{ if $.Site.Params.googleplus_user }}
+			<a class="google" href='https://plus.google.com/{{ $.Site.Params.googleplus_user }}' rel="author" title="Google+">Google+</a>
+		{{ end }}
+		{{ if $.Site.Params.twitter_user }}
+			<a class="twitter" href='http://twitter.com/{{ $.Site.Params.twitter_user }}' title="Twitter">Twitter</a>
+		{{ end }}
+		{{ if $.Site.Params.github_user }}
+			<a class="github" href='https://github.com/{{ $.Site.Params.github_user }}' title="GitHub">GitHub</a>
+		{{ end }}
+		{{ if $.Site.Params.coderwall_user }}
+			<a class="coderwall" href='https://coderwall.com/{{ $.Site.Params.coderwall_user }}' title="Coderwall">Coderwall</a>
+		{{ end }}
+		{{ if and $.Site.Params.stackoverflow_user $.Site.Params.stackoverflow_user_id }}
+		  <a class="stackoverflow" href='http://stackoverflow.com/users/{{ $.Site.Params.stackoverflow_user_id }}/{{ $.Site.Params.stackoverflow_user }}' title="StackOverflow"></a>
+		{{ end }}
+		{{ if $.Site.Params.linkedin_user }}
+			<a class="linkedin" href='http://www.linkedin.com/in/{{ $.Site.Params.linkedin_user }}' title="LinkedIn">LinkedIn</a>
+		{{ end }}
+		{{ if $.Site.Params.pinterest_user }}
+			<a class="pinterest" href='https://pinterest.com/{{ $.Site.Params.pinterest_user }}' title="Pinterest">Pinterest</a>
+		{{ end }}
+		{{ if $.Site.Params.delicious_user }}
+			<a class="delicious" href='http://delicious.com/{{ $.Site.Params.delicious_user }}' title="Delicious">Delicious</a>
+		{{ end }}
+		{{ if $.Site.Params.pinboard_user }}
+			<a class="pinboard" href='https://pinboard.in/u:{{ $.Site.Params.pinboard_user }}' title="Pinboard">Pinboard</a>
+		{{ end }}
+		{{ if $.Site.Params.douban_user }}
+			<a class="douban" href='https://www.douban.com/people/{{ $.Site.Params.douban_user }}' title="Douban">Douban</a>
+		{{ end }}
+		{{ if $.Site.Params.quora_user }}
+			<a class="quora" href='https://quora.com/{{ $.Site.Params.quora_user }}' title="Quora">Quora</a>
+		{{ end }}
+		{{ if $.Site.Params.instagram_user }}
+			<a class="instagram" href='https://instagram.com/{{ $.Site.Params.instagram_user }}' title="Instagram">Instagram</a>
+		{{ end }}
+    	{{ if $.Site.Params.behance_user }}
+			<a class="behance" href='https://www.behance.net/{{ $.Site.Params.behance_user }}' title="Behance">Behance</a>
+		{{ end }}
+    	{{ if $.Site.Params.subscribe_rss }}
+			<a class="rss" href='{{ $.Site.Params.subscribe_rss }}' title="RSS">RSS</a>
+		{{ end }}
+	</div>
+</nav>

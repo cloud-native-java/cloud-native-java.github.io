@@ -1,0 +1,36 @@
+baseurl = "http://replace-this-with-your-domain.com/"
+languageCode = "en-us"
+title = "hikari"
+theme = "hugo-hikari-theme"
+
+[permalinks]
+	post = "/:year/:month/:day/:slug"
+
+[params]
+	name = "Your name"
+	description = "Describe your website"
+	copyright = "POWERED BY [HUGO](//gohugo.io) - THEME: [HIKARI](//github.com/digitalcraftsman/hugo-hikari-theme) - © JOHN DOE"
+
+	# Enable comments by entering your Disqus shortname
+	disqusshortname = "spf13"
+	# Enable Google Analytics by entering your tracking code
+	googleanalytics = ""
+
+	# Links to newer/older blog posts
+	newer = "Newer"
+	older = "Older"
+
+[params.offcanvas]
+	# Menu items
+	title = "Hi, I'm John Doe"
+	bio = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, pariatur!"
+	subscribe = "Subscribe"
+	followme = "Follow me on"
+
+	[[params.offcanvas.socialnetworks]]
+		name = "Github"
+		url = "//github.com/spf13"
+
+	[[params.offcanvas.socialnetworks]]
+		name = "Twitter"
+		url = "//twitter.com/spf13"

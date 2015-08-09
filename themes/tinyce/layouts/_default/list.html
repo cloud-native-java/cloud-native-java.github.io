@@ -1,0 +1,30 @@
+{{ partial "head.html" . }}
+<body id="list">
+  {{ partial "header.html" . }}
+  <div id="content-container">
+    <div class="posts">
+      <!-- Iterate over the pages -->
+      {{ range first 10 .Data.Pages }}
+        <div class="post-preview">
+          <span class="post-symbol {{ .Params.color }}">
+            <i class="symbol fa fa-{{ .Params.icon }}"></i>
+          </span>
+
+          <div class="post-content">
+            <h1 class="post-title">
+              <a href="{{ .Site.BaseURL }}{{ .RelPermalink }}">{{ .Title }}</a>
+            </h1>
+
+            <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+
+            <p>{{ .Description }}</p>
+          </div>
+        </div>
+      {{ end }}
+
+    </div>
+  </div>
+
+  {{ partial "footer.html" . }}
+</body>
+</html>

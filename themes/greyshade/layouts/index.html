@@ -1,0 +1,39 @@
+{{ partial "head.html" . }}
+
+<body>
+	<div class="container">
+		<div class="left-col">
+			<div class="intrude-less">
+			<header id="header" class="inner">{{ partial "header.html" . }}</header>
+			</div>
+		</div>
+		<div class="mid-col">
+			{{ if $.Site.Params.banner }}
+				{{ partial "banner.html" . }}
+			{{ end }}
+			<div class="mid-col-container">
+				<div id="content" class="inner">
+					{{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+					<div itemscope itemtype="http://schema.org/Blog">
+					{{ range $paginator.Pages }}
+				        {{ .Render "summary" }}
+				    {{ end }}
+				    </div>
+				    <nav id="pagenavi">
+					    {{ if $paginator.HasPrev }}
+					        <a href="{{ $paginator.Prev.URL }}" class="prev">Prev</a>
+					    {{ end }}
+					    {{ if $paginator.HasNext }}
+					        <a href="{{ $paginator.Next.URL  }}" class="next">Next</a>
+					    {{ end }}
+					    <div class="center"><a href="{{ $.Site.BaseURL }}/post/">Blog Archives</a></div>
+					</nav>
+				</div>
+			</div>
+			<footer id="footer" class="inner">{{ partial "footer.html" . }}</footer>
+		</div>
+	</div>
+	{{ partial "disqus.html" . }}
+	{{ partial "custom/after_footer.html" . }}
+</body>
+</html>

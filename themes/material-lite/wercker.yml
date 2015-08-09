@@ -1,0 +1,5 @@
+box: samueldebruyn/hugo-build
+build:
+  steps:
+    - samueldebruyn/hugo-theme-check:
+        theme: material-lite

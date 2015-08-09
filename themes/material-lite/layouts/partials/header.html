@@ -1,0 +1,26 @@
+<!doctype html>
+{{ partial "notice.html" . }}
+<html lang="{{.Site.LanguageCode}}">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <base href="{{ .Site.BaseURL }}">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    
+    <link href="/post/index.xml" rel="alternate" type="application/rss+xml" title="RSS - {{ .Site.Title }}" />
+    
+    {{ partial "meta.html" . }} 
+    
+    {{ partial "header-extra.html" . }} 
+
+    {{ partial "design.html" . }}    
+    
+  </head>
+  <body>
+    <div class="main-container mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">

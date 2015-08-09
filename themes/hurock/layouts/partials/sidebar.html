@@ -1,0 +1,55 @@
+<div id="sidebar">
+<div class="sidebar">
+  <div class="sidebar-about">
+    <a href="{{ .Site.BaseURL }}">
+      <img src="media/me.jpg" title="{{ .Site.Author.name }}" alt="Me" />
+      <h4 class="sidebar-title">{{ .Site.Title }}</h4>
+    </a>
+    <span class="sidebar-tagline">{{ with .Site.Params.Description }} {{ . | safeHTML}} {{end}}</span>
+  </div>
+  <nav class="sidebar-nav">
+    <ul class="sidebar-nav-list">
+      <li class="sidebar-nav-item nav-home">
+        <span class="genericon genericon-home"></span><a class="sidebar-link" href="{{.Site.BaseURL}}">Home</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="genericon genericon-feed" href="posts/index.xml"></a><a class="sidebar-link" href="posts/">Posts/</a>
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="genericon genericon-feed" href="links/index.xml"></a><a class="sidebar-link" href="links/">Links/</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="sidebar-externals">
+  {{ if or .Site.Author.github .Site.Author.twitter .Site.Author.facebook .Site.Author.googleplus .Site.Author.linkedin }}
+
+  {{ with .Site.Author.github }}
+  <a class="genericon genericon-github" href="https://github.com/{{ . }}" ><!--GitHub--></a>
+  {{ end }}
+
+  {{ with .Site.Author.twitter }}
+  | <a class="genericon genericon-twitter" href="https://twitter.com/{{ . }}"><!--Twitter--></a>
+  {{ end }}
+
+  {{ with .Site.Author.facebook }}
+  | <a class="genericon genericon-facebook" href="https://www.facebook.com/{{ . }}"><!--Facebook--></a>
+  {{ end }}
+
+  {{ with .Site.Author.googleplus }}
+  | <a class="genericon genericon-googleplus" href="https://plus.google.com/+{{ . }}"><!--Google+--></a>
+  {{ end }}
+
+  {{ with .Site.Author.linkedin }}
+  | <a class="genericon genericon-linkedin-alt" href="https://www.linkedin.com/in/{{ . }}"><!--Linkedin--></a>
+  {{ end }}
+
+  {{ end }}
+  | <a class="genericon genericon-mail" href="mailto:{{ .Site.Author.email }}"><!--Email--></a>
+  </div>
+  <hr />
+  <div class="sidebar-bottom">
+    <p>Powered by <a href="http://gohugo.io">Hugo</a>. Theme: <a href="https://github.com/TiTi/hurock">Hurock</a>.</p>
+    <p>Copyright &copy; {{.Now.Format "2006"}}. All rights reserved.</p>
+  </div>
+</div>
+</div>

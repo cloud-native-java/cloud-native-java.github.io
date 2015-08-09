@@ -1,0 +1,24 @@
+<!-- Load script if disquss comments are enabled and `page.comments` is either empty (index) or set to true -->
+{{ if $.Site.Params.disqus_short_name }}
+<script type="text/javascript">
+    // var disqus_developer = 1;
+    var disqus_shortname = '{{ $.Site.Params.disqus_short_name }}';
+
+    // show comment count for index and category pages.
+    {{ if and ($.Site.Params.disqus_show_comment_count) (not .IsPage) }}
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    {{ end }}
+
+    {{ if and (.IsPage) (ne .Params.comments "false") }}
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    {{ end }}
+</script>
+{{ end }}

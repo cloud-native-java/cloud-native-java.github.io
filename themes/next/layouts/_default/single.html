@@ -1,0 +1,81 @@
+{{ partial "header.html" . }}
+<div class="uk-block uk-block-default">
+	<div class="uk-container uk-container-center">
+		<div class="uk-grid">
+			<div class="uk-width-1-10"></div>
+			<div class="uk-width-8-10">
+				<article class="uk-article">
+					<h1 class="uk-article-title" style="font-size: 23px;">
+						{{ .Title }}
+					</h1>
+					{{ $baseurl := .Site.BaseURL }}
+					<p class="uk-article-meta">Posted on {{ .Date.Format .Site.Params.DateFormat }} | {{ range .Params.tags }} <a href="{{ $baseurl }}/tags/{{ . | urlize}}" class="uk-button uk-button-mini">#{{ . }}</a>{{ end }}</p>
+        <div class="uk-panel uk-panel-box uk-panel-box-primary">
+          Unless otherwise indicated, the text of documents in this site is available under the <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License</a>, or any later version. Copyright {{ substr .Site.Params.DateFrom 0 4 }}-2016 {{ .Site.Params.Author }}.
+        </div>
+					{{ .Content }}
+				</article>
+			</div>
+			<div class="uk-width-1-10"></div>
+		</div>
+    <div class="uk-grid">
+      <div class="uk-width-1-10"></div>
+      <div class="uk-width-8-10">
+        <!-- <div class="uk-panel uk-panel-box uk-panel-box-primary">
+          This article is authorized by {{ .Site.Params.Author }} and is licensed under a <a href="https://creativecommons.org/licenses/by/3.0/deed">Creative Commons Attribution 3.0 Unported License.</a>
+        </div> -->
+        <div class="uk-panel uk-panel-box uk-panel-box-secondary">
+          <h3 class="uk-panel-title">Related Posts</h3>
+          {{ $page_link := .Permalink }}
+          {{ $tags := .Params.tags }}
+          <ul class="uk-list uk-list-striped">
+            {{ range .Site.Pages }}
+              {{ $page := . }}
+              {{ $has_common_tags := intersect $tags .Params.tags | len | lt 0 }}
+              {{ if and $has_common_tags (ne $page_link $page.Permalink) }}
+                <li><a href="{{ $page.Permalink }}">{{ $page.Title }}</a></li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+      <div class="uk-width-1-10"></div>
+    </div>
+    <div class="uk-grid">
+      <div class="uk-width-1-10"></div>
+      <div class="uk-width-8-10">
+        <div id="disqus_thread" data-uk-scrollspy></div>
+      </div>
+      <div class="uk-width-1-10"></div>
+    </div>
+	</div>
+</div>
+
+{{ partial "footer.html" . }}
+
+{{ if isset .Site.Params "Disqus" }}
+<script type="text/javascript">
+
+(function() {
+
+  if (window.location.hostname == "localhost") { return; };
+
+  var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    ds_loaded = false;
+  var disqus_shortname = '{{ .Site.Params.Disqus }}';
+    disqus_url = '{{ .Permalink }}';
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+  $('[data-uk-scrollspy]').on('init.uk.scrollspy', function () {
+    if (!ds_loaded){
+      ds_loaded = true;
+      document.getElementById('disqus_thread').appendChild(dsq);
+    }
+  })
+
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{{ end }}

@@ -1,0 +1,14 @@
+<h3>
+  Author
+</h3>
+
+<p>
+  <div class="media">
+    <img src="http://www.gravatar.com/avatar/{{ .Site.Params.gravatar_id }}?s=100" alt="{{ .Site.Params.author_name }}" class="pull-left">
+    <div class="media-body">
+      <h4 class="media-heading">{{ .Site.Params.author_name }}</h4>
+    </div>
+  </div>
+</p>
+
+<p><a href="https://twitter.com/{{ .Site.Params.twitter_username }}" class="twitter-follow-button" data-show-screen-name="false" data-show-count="true" data-dnt="true" data-size="large">Follow @{{ .Site.Params.twitter_username }}</a></p>

@@ -1,0 +1,12 @@
+<div class="sidebar_single_module">
+        <div class="sidebar_wraper">
+                <div class="sidebar_inner">
+                        <div class="tag_area">
+                                <h2>Tag</h2>
+                                {{ range .Site.Taxonomies.tags.ByCount }}
+                                <a href="/tags/{{ .Name | urlize }}">{{ .Name }}</a>
+                                {{ end }}
+                        </div>
+                </div>
+        </div>
+</div>

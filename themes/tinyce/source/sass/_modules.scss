@@ -1,0 +1,99 @@
+// -------------------------------------------
+//   Modules
+// -------------------------------------------
+
+/* Horizontal navigation */
+.horizontal-nav-list {
+  @include clearfix();
+
+  li {
+    margin: 0 15px;
+    float: left;
+
+    list-style: none;
+    border-bottom: 3px solid transparent;
+
+    color: $soft-gray;
+    font-size: 16px;
+
+    @include transition(all .5s ease);
+
+    &:hover {
+      border-color: $soft-gray;
+    }
+
+    &.active {
+      color: #333332;
+      border-color: #5e5e5d;
+    }
+
+    a {
+      display: inline-block;
+      min-width: 50px;
+      height: 40px;
+      text-decoration: none;
+      text-align: center;
+    }
+  }
+}
+
+/* Single post in list */
+.post-preview {
+  height: 150px;
+  margin: 15px 0;
+  position: relative;
+
+  @include transition(all .5s ease);
+
+  &:hover {
+    background: white;
+  }
+
+  .post-symbol {
+    display: inline-block;
+    height: 150px;
+    width: 150px;
+  }
+
+  .post-content {
+    position: absolute;
+    left: 190px;
+    top: 15px;
+    display: inline-block;
+    color: $gray;
+  }
+}
+
+/* Post symbol */
+.post-symbol {
+  text-align: center;
+  color: white;
+
+  @include tone(red, $red);
+  @include tone(blue, $blue);
+  @include tone(orange, $orange);
+  @include tone(yellow, $yellow);
+  @include tone(green, $green);
+  @include tone(gray, $gray);
+
+  .symbol {
+    text-align: center;
+    font-size: 100px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+}
+
+/* Profile image */
+.profile-image {
+  border-radius: 50%;
+  width: 80px;
+  height: auto;
+
+  &:hover {
+    -webkit-animation-name: shake;
+    animation-name: shake;
+  }
+}

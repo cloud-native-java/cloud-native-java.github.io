@@ -1,0 +1,7 @@
+{
+  "name": "Shiori",
+  "private": true,
+  "devDependencies": {
+    "bootstrap-sass": "~3.3.3"
+  }
+}

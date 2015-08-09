@@ -1,0 +1,8 @@
+{{ if (.Prev) or (.Next) }}
+            <div class="paginating_area">
+                <ul>
+                    {{ if .Prev }}<li><a href="{{ .Prev.RelPermalink }}" class="p_arrow" title="Previous blog post: {{ .Prev.Title }}"><i>&lsaquo;</i></a></li>{{ end }}
+                    {{ if .Next }}<li><a href="{{ .Next.RelPermalink }}" class="p_arrow" title="Next blog post: {{ .Next.Title }}"><i>&rsaquo;</i></a></li>{{ end }}
+                </ul>
+            </div>
+{{ end }}

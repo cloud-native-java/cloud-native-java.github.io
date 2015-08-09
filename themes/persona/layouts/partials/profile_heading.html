@@ -1,0 +1,28 @@
+{{ if .Site.Params.ShowTopProfile }}
+    <section class="profile_area">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="profile_inner">
+              <div class="profile_picture"><a href="{{ .Site.BaseURL }}"><img src="{{ .Site.Params.logo }}" alt="title" /></a></div>
+              <h2><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h2>
+              <p>{{ .Site.Params.description }}</p>
+              {{ if .Site.Params.ShowTopSocial }}
+              <div class="social_icon">
+                  {{ with .Site.Params.Social.github }}<a href="https://github.com/{{ . }}" title="@{{ . }} on github" target="_blank"> <i class='icon icon-github'></i></a>{{ end }}
+                  {{ with .Site.Params.Social.bitbucket }}<a href="https://bitbucket.org/{{ . }}" title="@{{ . }} on bitbucket" target="_blank"> <i class='icon icon-bitbucket'></i></a>{{ end }}
+                  {{ with .Site.Params.Social.twitter }}<a href="http://twitter.com/{{ . }}" title="@{{ . }} on Twitter" target="_blank"> <i class='icon icon-twitter'></i></a>{{ end }}
+                  {{ with .Site.Params.Social.facebook }}<a href="https://www.facebook.com/{{ . }}" title="@{{ . }} on Facebook" target="_blank"> <i class='icon icon-facebook-square'></i></a>{{ end }}
+                  {{ with .Site.Params.Social.flickr }}<a href="http://www.flickr.com/photos/{{ . }}/" title="{{ . }} on flickr" target="_blank"> <i class='icon icon-flickr'></i></a>{{ end }}
+                  {{ with .Site.Params.Social.linkedin }}<a href="http://no.linkedin.com/in/{{ . }}/en" title="Linkedin" target="_blank"> <i class='icon icon-linkedin-square'></i></a>{{ end }}
+                  {{ with .Site.Params.Social.skype }}<a href="skype:{{ . }}?call" title="Call {{ . }} on skype"> <i class='icon icon-skype'></i></a>{{ end }}
+                  {{ with .Site.Params.Social.email }}<a href="mailto:{{ . }}" title="Email {{ . }}"> <i class='icon icon-envelope-o'></i></a>{{ end }}
+                  {{ if .RSSlink }}<a href="{{ .RSSlink }}" /> <i class='icon icon-rss'></i></a>{{ end }}
+              </div>
+              {{ end }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+{{ end }}

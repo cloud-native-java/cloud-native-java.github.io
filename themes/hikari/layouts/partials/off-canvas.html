@@ -1,0 +1,32 @@
+<div class="off-canvas">
+    <figure class="avatar">
+        <img src="{{ .Site.BaseURL }}img/avatar.jpg" title="{{ with .Site.Params.name }}{{ . }}{{ end }}">
+    </figure>
+    <div class="bio">
+        {{ with .Site.Params.offcanvas.title }}
+        <h1>{{ . }}</h1>
+        {{ end }}
+        {{ with .Site.Params.offcanvas.bio }}
+        <p>{{ . | markdownify }}</p>
+        {{ end }}
+    </div>
+    <nav>
+        {{ with .Site.Params.offcanvas.subscribe }}
+        <h6>{{ . }}</h6>
+        {{ end }}
+
+        <ul>
+            <li><a target="_blank" href="{{ .Site.BaseURL }}index.xml">RSS feed</a></li>
+        </ul>
+
+        {{ with .Site.Params.offcanvas.followme }}
+        <h6>{{ . }}</h6>
+        {{ end }}
+
+        <ul>
+        {{ range .Site.Params.offcanvas.socialnetworks }}
+            <li><a target="_blank" href="{{ .url }}">{{ .name }}</a></li>
+        {{ end }}
+        </ul>        
+    </nav>
+</div>

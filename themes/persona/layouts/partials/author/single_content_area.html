@@ -1,0 +1,23 @@
+              <article class="post_content_area">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+                    <section class="single_post_content">
+                      <div class="row">
+                        <div class="col-md-10">
+                          <h2 property="headline">{{ .Title }}</h2>
+                          <small>{{ .Params.address }}, <a href="mailto:{{ .Params.email }}">{{ .Params.email }}</a><br />
+                          Phone: {{ .Params.phone }}<br/>
+                          PGP:&nbsp;<a href="{{ .Params.pgppubfile }}">{{ .Params.pgp }}</a></small>
+                          {{ if .Description }}
+                          <h3 property="alternativeHeadline"><small>{{ .Description | safeHTML }}</small></h3>
+                          {{ end }}
+                        </div>
+                        <div class="profile_picture"><a href="#"><img src="{{ .Params.img }}"/></a></div>
+                      </div>
+
+                      <hr>
+                      {{ .Content }}
+                    </section>
+                  </div>
+                </div>
+              </article>

@@ -1,0 +1,7 @@
+{{ partial "header.html" . }}
+	<div class="container">
+		{{ range first 20 .Data.Pages.ByDate.Reverse }}
+			{{ .Render "frontpage-post" }}
+		{{ end }}
+	</div>
+{{ partial "footer.html" . }}

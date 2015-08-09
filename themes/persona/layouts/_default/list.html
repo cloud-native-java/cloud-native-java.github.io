@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+<body vocab="http://schema.org/" typeof="WebPage">
+{{ partial "navbar.html" . }}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="well well-sm">
+              <li>
+                  <h5><a href="{{ .Permalink }}">{{ .Title}}</a><br>
+                  <small>posted on {{ .Date.Format "January 2, 2006" }}</small></h5>
+              </li>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3">
+            {{ partial "menu.html" . }}
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}

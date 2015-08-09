@@ -1,0 +1,66 @@
+{{ partial "header.html" . }}
+
+<style type="text/css">
+.ctn {
+width: 600px;
+height: 400px;
+position: relative;
+}
+
+#splash {
+position: absolute;
+width: 600px;
+height: 400px;
+top: 0;
+left:0;
+background-image: url('404/fernetjs-invaders.png');
+opacity: 0;
+display:none;
+z-index: 2;
+text-align: right;
+float: right;
+}
+
+#splash a {
+font-family: Verdana;
+font-size: 12pt;
+text-decoration: none;
+color: #323330;
+margin: 40px;
+line-height: 4;
+}
+
+#game-canvas {
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border: 1px solid silver;
+background-color:#000;
+}
+
+#fps {
+display: none;
+}
+</style>
+
+<div id="container">
+<h1>Oops! That page couldn't be found :-/</h1>
+Want to play some SpaceInvaders instead?
+
+<div class="ctn">
+  <canvas id="game-canvas" width="600" height="400"></canvas>
+  <div id="splash">
+    <a href="#" onclick="play();" style="font-size: 26px;">Play again!</a>
+    <br/>
+    <a href="https://github.com/pjnovas/invaders404" target="_blank">[Project homepage]</a>
+  </div>
+</div>
+<span id="fps"></span>
+
+</div>
+
+<script type="text/javascript" src="404/game.min.js"></script>
+<script type="text/javascript" src="404/start.js"></script>
+
+{{ partial "sidebar.html" . }}
+{{ partial "footer.html" . }}

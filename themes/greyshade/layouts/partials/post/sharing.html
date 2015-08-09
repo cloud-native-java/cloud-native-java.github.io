@@ -1,0 +1,19 @@
+<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+	{{ if $.Site.Params.facebook_like }}
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+	{{ end }}
+	{{ if $.Site.Params.twitter_tweet_button }}
+	<a class="addthis_button_tweet"></a>
+	{{ end }}
+	{{ if $.Site.Params.google_plus_one }}
+	<a class="addthis_button_google_plusone" g:plusone:size='{{ $.Site.Params.google_plus_one_size }}'></a>
+	{{ end }}
+	{{ if $.Site.Params.addthis_profile_id }}
+	<a class="addthis_counter addthis_pill_style"></a>
+	{{ end }}
+	</div>
+	{{ if or $.Site.Params.facebook_like (or $.Site.Params.twitter_tweet_button (or $.Site.Params.google_plus_one $.Site.Params.addthis_profile_id)) }}
+  	<script type="text/javascript" src='http://s7.addthis.com/js/250/addthis_widget.js#pubid={{ $.Site.Params.addthis_profile_id }}'></script>
+  	{{ end }}
+</div>

@@ -1,0 +1,6 @@
+Copyright &copy; {{ dateFormat "2006" .Now }}
+{{ if $.Site.Author.name }}
+    {{ $.Site.Author.name }}
+{{ else }}
+    {{ $.Site.Title }}
+{{ end }}

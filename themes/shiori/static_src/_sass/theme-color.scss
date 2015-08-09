@@ -1,0 +1,16 @@
+// To change theme color, change $theme-color variable to:
+// $dark
+// $turquoise
+// $green
+// $blue
+// $purple
+// $orange
+// $red
+$theme-color: $dark;
+
+$navbar-inverse-bg: $theme-color;
+@if $theme-color == $dark {
+  $brand-primary: $dark-brand-primary;
+} @else {
+  $brand-primary: $theme-color;
+}

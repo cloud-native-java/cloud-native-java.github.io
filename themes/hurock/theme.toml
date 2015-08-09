@@ -1,0 +1,11 @@
+name = "hurock"
+description = "A classic sidebar hugo theme"
+license = "MIT"
+licenselink = "https://github.com/titi/hurock/LICENSE"
+homepage = "https://github.com/titi/hurock"
+tags = ["blog", "personal"]
+features = ["sidebar", "TableOfContents", "highlight", "404"]
+
+[author]
+  name = "Thibault ROHMER"
+  homepage = "http://titi.github.io"

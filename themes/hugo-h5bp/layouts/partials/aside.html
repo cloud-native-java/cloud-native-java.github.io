@@ -1,0 +1,10 @@
+          <aside>
+                    <h3>Recent</h3>
+                    <ul>
+                        {{ range first 10 .Site.Pages }}
+                        <li>        
+                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </aside>

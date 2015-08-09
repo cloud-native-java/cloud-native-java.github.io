@@ -1,0 +1,33 @@
+// -------------------------------------------
+//   Mixins
+// -------------------------------------------
+
+/* Cross browser transitions */
+
+@mixin transition($params...) {
+  -webkit-transition: $params;
+  -moz-transition: $params;
+  -o-transition: $params;
+  transition: $params;
+}
+
+/* Clearfix */
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
+}
+
+/* Tone */
+
+@mixin tone($name, $color) {
+  &.#{$name} {
+    background: $color;
+  }
+}

@@ -1,0 +1,18 @@
+{{ partial "layout_begin.html" . }}
+<div class="row">
+  <div class="col-sm-8">
+    {{ range first 10 .Site.Pages.ByDate.Reverse }}
+      {{ if eq .Type "post" }}
+        {{ .Render "summary"}}
+      {{ end }}
+    {{ end }}
+    <hr>
+    <div class="home-read-more">
+      <a href="{{ .Site.BaseURL }}/post" class="btn btn-primary btn-block btn-lg">View All {{ len (where .Site.Pages "Section" "post") }} Articles →</a>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    {{ partial "sidebar.html" . }}
+  </div>
+</div>
+{{ partial "layout_end.html" . }}

@@ -1,0 +1,41 @@
+{{ partial "head.html" . }}
+<div class="content container">
+  <div class="posts">
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
+    {{ range $paginator.Pages }}
+    <div class="post">
+      <h1 class="post-title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+      </h1>
+      <span class="post-date">{{ .Date.Format "Jan 2, 2006" }} &middot; {{ .ReadingTime }} minute read{{ if .Site.DisqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+      {{ if isset .Params "categories" }}
+      <br/>
+      {{ range .Params.categories }}<a class="label" href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ . }}</a>{{ end }}
+      {{ end }}</span>
+      {{ if eq .Site.Params.truncate false }}
+      {{ .Content }}
+      {{ else if .Description }}
+      <p>{{ .Description }}</p>
+      <a href="{{ .Permalink }}">Read On &rarr;</a>
+      {{ else }}
+      {{ .Summary }}
+      {{ if .Truncated }}<a href="{{ .Permalink }}">Read On &rarr;</a>{{ end }}
+      {{ end }}
+    </div>
+    {{ end }}
+    {{ template "_internal/pagination.html" . }}
+  </div>
+</div>
+
+{{ with .Site.DisqusShortname }}
+<script type="text/javascript">
+var disqus_shortname = {{ . }};
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
+{{ end }}
+{{ partial "foot.html" . }}

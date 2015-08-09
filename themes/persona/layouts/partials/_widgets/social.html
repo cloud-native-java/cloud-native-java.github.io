@@ -1,0 +1,34 @@
+{{ if .Site.Params.Social }}
+<div class="sidebar_single_module">
+        <div class="sidebar_wraper">
+                <div class="sidebar_inner">
+                        <h2>Social:</h2>
+                        <div class="right_social_area">
+                                {{ with .Site.Params.Social.github }}<a href="https://github.com/{{ . }}" title="@{{ . }} on github" target="_blank"> <i class='icon icon-github'></i></a>{{ end }}
+                                {{ with .Site.Params.Social.bitbucket }}<a href="https://bitbucket.org/{{ . }}" title="@{{ . }} on bitbucket" target="_blank"> <i class='icon icon-bitbucket'></i></a>{{ end }}
+                                {{ with .Site.Params.Social.twitter }}<a href="http://twitter.com/{{ . }}" title="@{{ . }} on Twitter" target="_blank"> <i class='icon icon-twitter'></i></a>{{ end }}
+                                {{ with .Site.Params.Social.facebook }}<a href="https://www.facebook.com/{{ . }}" title="@{{ . }} on Facebook" target="_blank"> <i class='icon icon-facebook-square'></i></a>{{ end }}
+                                {{ with .Site.Params.Social.flickr }}<a href="http://www.flickr.com/photos/{{ . }}/" title="{{ . }} on flickr" target="_blank"> <i class='icon icon-flickr'></i></a>{{ end }}
+                                {{ with .Site.Params.Social.linkedin }}<a href="http://no.linkedin.com/in/{{ . }}/en" title="Linkedin" target="_blank"> <i class='icon icon-linkedin-square'></i></a>{{ end }}
+                                {{ with .Site.Params.Social.skype }}<a href="skype:{{ . }}?call" title="Call {{ . }} on skype"> <i class='icon icon-skype'></i></a>{{ end }}
+                                {{ with .Site.Params.Social.email }}<a href="mailto:{{ . }}" title="Email {{ . }}"> <i class='icon icon-envelope-o'></i></a>{{ end }}
+                                {{ if .RSSlink }}<a href="{{ .RSSlink }}" /> <i class='icon icon-rss'></i></a>{{ end }}
+                                {{ with .Site.Params.Social.dribble }}<a href="{{ . }}" target="_blank"> <i class="icon icon-dribbble"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.vimeo }}<a href="{{ . }}" target="_blank"> <i class="icon icon-vimeo"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.pinterest }}<a href="{{ . }}" target="_blank"> <i class="icon icon-pinterest"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.lastfm }}<a href="{{ . }}" target="_blank"> <i class="icon icon-lastfm"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.googleplus }}<a href="{{ . }}" target="_blank"> <i class="icon icon-google-plus-square"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.dropbox }}<a href="{{ . }}" target="_blank"> <i class="icon icon-dropbox"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.instagram }}<a href="{{ . }}"> <i class="icon icon-instagram"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.behance }}<a href="{{ . }}" target="_blank"> <i class="icon icon-behance-square"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.vkontakte }}<a href="{{ . }}" target="_blank"> <i class="icon icon-vk"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.evernote }}<a href="{{ . }}" target="_blank"> <i class="icon icon-evernote"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.picasa }}<a href="{{ . }}" target="_blank"> <i class="icon icon-picasa"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.droplet }}<a href="{{ . }}" target="_blank"> <i class="icon icon-droplet"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.stumbleupon }}<a href="{{ . }}" target="_blank"> <i class="icon icon-stumbleupon"></i></a>{{ end }}
+                                {{ with .Site.Params.Social.soundcloud }}<a href="https://soundcloud.com/{{ . }}" title="@{{ . }} at SoundCloud" target="_blank"> <i class="icon icon-soundcloud"></i></a>{{ end }}
+                        </div>
+                </div>
+        </div>
+</div>
+{{ end }}

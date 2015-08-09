@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{{ "<!--[if lt IE 7]>" | safeHTML }}      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> {{ "<![endif]-->" | safeHTML }}
+{{ "<!--[if IE 7]>" | safeHTML }}         <html class="no-js lt-ie9 lt-ie8"> {{ "<![endif]-->" | safeHTML }}
+{{ "<!--[if IE 8]>" | safeHTML }}         <html class="no-js lt-ie9"> {{ "<![endif]-->" | safeHTML }}
+{{ "<!--[if gt IE 8]><!-->" | safeHTML }} <html class="no-js"> {{ "<!--<![endif]-->" | safeHTML }}
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/application.css">
+    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  </head>

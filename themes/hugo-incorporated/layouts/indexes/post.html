@@ -1,0 +1,12 @@
+{{ partial "header.html" . }}
+<article>
+  <div class="container">
+    <h1>Blog Archive</h1>
+  </div>
+</article>
+<article class="container">
+  {{ range .Data.Pages }}
+    {{ .Render "archive" }}
+  {{ end }}
+</article>
+{{ partial "footer.html" . }}

@@ -1,0 +1,20 @@
+
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/static/js/thirdparties.js"></script>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/static/js/jquery.min.js"></script>
+
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/static/js/lightGallery.min.js"></script>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/static/js/lightslider.min.js"></script>
+
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/static/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/static/js/main.js"></script>
+
+  <script type="text/javascript" src="{{ .Site.BaseURL }}/static/js/highlight.pack.js"></script>
+  <script>
+    hljs.configure({
+      languages: ['bash', 'html']
+    });
+    hljs.initHighlightingOnLoad();
+  </script>
+  {{ partial "analytics.html" }}
+</body>
+</html>

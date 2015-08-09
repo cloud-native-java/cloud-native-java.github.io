@@ -1,0 +1,45 @@
+html {
+    overflow-y: scroll;
+}
+
+pre {
+    padding: 0;
+}
+
+pre code {
+    padding: .5em;
+    display: block;
+}
+
+nav.navbar {
+    margin: 5px;
+}
+
+header.nav {
+    margin-bottom: 50px;
+}
+
+.post-title {
+    margin-top: 0;
+}
+
+.post-content {
+    margin-bottom: 20px;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5 {
+    margin-top: 40px;
+}
+
+.post-tags,
+.post-rels {
+    margin-bottom: 50px;
+}
+
+footer.copy {
+    padding: 20px 0;
+}
