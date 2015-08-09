@@ -7,4 +7,4 @@ indexes:
 BaseURL: "http://cloudnativejava.io"
 title: "Cloud Native Java"
 permalinks:
-  - posts :  "/perma/:year/:month/:title/"
+  posts :  "/perma/:year/:month/:title/"
