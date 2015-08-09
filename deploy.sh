@@ -17,4 +17,4 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public git@github.com:cloud-native-java/cloud-native-java.git gh-pages
+git subtree push --prefix=public git@github.com:cloud-native-java/cloud-native-java.github.io.git gh-pages
