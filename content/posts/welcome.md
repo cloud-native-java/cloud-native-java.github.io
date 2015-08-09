@@ -1,11 +1,11 @@
-+++
+---
 date : "2015-08-08T19:37:59-07:00"
 title : "To the cloud!"
 description : "welcome to the new cloudnativejava.io blog"
 categories :
     - "first"
     - "welcome"
-+++
+---
 
 ## Welcome
 
