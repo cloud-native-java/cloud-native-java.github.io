@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blah on Hugo Blog Template for GitHub Pages</title>
-    <link>http://spencerlyon2.github.io/hugo_gh_blog/categories/blah/</link>
+    <link>http://cloud-native-java.github.io/categories/blah/</link>
     <description>Recent content in Blah on Hugo Blog Template for GitHub Pages</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 27 Mar 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://spencerlyon2.github.io/hugo_gh_blog/categories/blah/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cloud-native-java.github.io/categories/blah/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>First Post</title>
-      <link>http://spencerlyon2.github.io/hugo_gh_blog/posts/oldest/</link>
+      <link>http://cloud-native-java.github.io/posts/oldest/</link>
       <pubDate>Thu, 27 Mar 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://spencerlyon2.github.io/hugo_gh_blog/posts/oldest/</guid>
+      <guid>http://cloud-native-java.github.io/posts/oldest/</guid>
       <description>
 
 &lt;h2 id=&#34;sample-post-1:5be75e971689338db5c820fd71089689&#34;&gt;Sample Post 1&lt;/h2&gt;
