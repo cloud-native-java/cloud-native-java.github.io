@@ -4,5 +4,7 @@ layoutdir: "layouts"
 publishdir: "public"
 indexes:
   category: "categories"
-BaseURL: "http://cloud-native-java.github.io/"
-title: "Hugo Blog Template for GitHub Pages"
+BaseURL: "http://cloudnativejava.io"
+title: "Cloud Native Java"
+permalinks:
+  - posts :  "/perma/:year/:month/:title/"

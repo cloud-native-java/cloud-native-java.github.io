@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Hugo Blog Template for GitHub Pages</title>
-    <link>http://cloud-native-java.github.io/posts/</link>
-    <description>Recent content in Posts on Hugo Blog Template for GitHub Pages</description>
+    <title>Posts on Cloud Native Java</title>
+    <link>http://cloudnativejava.io/posts/</link>
+    <description>Recent content in Posts on Cloud Native Java</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 08 Aug 2015 19:37:59 -0700</lastBuildDate>
-    <atom:link href="http://cloud-native-java.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cloudnativejava.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>To the cloud!</title>
-      <link>http://cloud-native-java.github.io/posts/welcome/</link>
+      <link>http://cloudnativejava.io/posts/welcome/</link>
       <pubDate>Sat, 08 Aug 2015 19:37:59 -0700</pubDate>
       
-      <guid>http://cloud-native-java.github.io/posts/welcome/</guid>
+      <guid>http://cloudnativejava.io/posts/welcome/</guid>
       <description>
 
 &lt;h2 id=&#34;welcome:2cc7dc244eed4480e8b46c91e911e96b&#34;&gt;Welcome&lt;/h2&gt;
