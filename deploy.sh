@@ -4,7 +4,9 @@ echo -e "deploying updates to Github.."
 
 # Build the project.
 hugo
-
+cp CNAME public/CNAME
+git add public/CNAME 
+git commit -a -m adding\ CNAME
 # Add changes to git.
 git add -A
 
