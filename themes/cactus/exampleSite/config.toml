@@ -1,0 +1,35 @@
+# Site settings
+baseurl = "http://replace-this-with-your-domain.com/"
+languageCode = "en-us"
+title = "Hugo Cactus Theme"
+theme = "hugo-cactus-theme"
+
+[params]
+	name = "Mr. Hugo"
+	description = "Describe your website"
+	bio = "Blogger - Programmer - Gopher"
+	# Enter optionally your twitter account
+	twitter = "Your Twitter account"
+	# Disable comments by leaving disqusShortname empty
+	disqusShortname = "spf13"
+	enableRSS = true
+
+	# The variables below are optionally too and can be used to
+	# translate or customize each string of the theme.
+
+	# Navigation links
+	home = ""
+	about = ""
+	subscribe = ""
+	# Pagination links
+	olderPosts = ""
+	newerPosts = ""
+	readMore = ""
+	copyright = ""
+	# Sharing options and author information in posts
+	aboutAuthor = "I'm an enthusiastic gopher."
+	tweet = ""
+	share = ""
+	# 404 page
+	title404 = ""
+	subtitle404 = ""
