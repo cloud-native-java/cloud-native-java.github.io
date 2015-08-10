@@ -1,6 +1,0 @@
-+++
-title = ""
-description = ""
-keywords = []
-categories = []
-+++
