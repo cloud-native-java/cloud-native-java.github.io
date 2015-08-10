@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Cloud Native Java</title>
+    <link>http://cloudnativejava.io/</link>
+    <description>Recent content on Cloud Native Java</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Aug 2015 17:22:42 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://cloudnativejava.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>about</title>
-      <link>http://localhost:1313/about/</link>
+      <link>http://cloudnativejava.io/about/</link>
       <pubDate>Sun, 09 Aug 2015 17:22:42 -0700</pubDate>
       
-      <guid>http://localhost:1313/about/</guid>
+      <guid>http://cloudnativejava.io/about/</guid>
       <description>
 
 &lt;h1 id=&#34;about-this-blog:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About this blog&lt;/h1&gt;
@@ -25,10 +25,10 @@
     
     <item>
       <title>Welcome to the thunderdome</title>
-      <link>http://localhost:1313/post/welcome/</link>
+      <link>http://cloudnativejava.io/post/welcome/</link>
       <pubDate>Sun, 09 Aug 2015 17:18:18 -0700</pubDate>
       
-      <guid>http://localhost:1313/post/welcome/</guid>
+      <guid>http://cloudnativejava.io/post/welcome/</guid>
       <description>&lt;p&gt;A preliminary investigation into a hiker&amp;rsquo;s death in Yellowstone National Park suggests the man was attacked by a grizzly bear. While the exact cause of death has not been determined, investigators identified what appear to be defensive wounds on the victim&amp;rsquo;s forearms, Yellowstone National Park said in a statement Saturday. A forensic autopsy is scheduled for Monday. (this from CNN)&lt;/p&gt;
 </description>
     </item>
