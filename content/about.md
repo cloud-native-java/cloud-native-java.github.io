@@ -5,6 +5,6 @@ title = "about"
 
 +++
 
-# About this blog
+# About
 
-Welcome [to CloudNativeJava blog](http://twitter.com/CloudNativeJava). 
+This blog is meant to showcase the ongoing discussion around the Cloud Native Architecture and, hopefully, to serve as a sounding board for O'Reilly's upcoming book [_Cloud Native Java_](http://shop.oreilly.com/product/0636920038252.do).
