@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cloud Native Java</title>
-    <link>http://cloudnativejava.io/</link>
+    <link>http://cloudnativejava.io/index.xml</link>
     <description>Recent content on Cloud Native Java</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -18,6 +18,10 @@
       <description>&lt;p&gt;After just a bit more than two years since the original post to this portal went up, we&amp;rsquo;re pleased to say that &lt;em&gt;Cloud Native Java&lt;/em&gt; is now available! It&amp;rsquo;s &lt;a href=&#34;https://www.amazon.com/Cloud-Native-Java-Designing-Resilient/dp/1449374646/ref=sr_1_1?ie=UTF8&amp;amp;qid=1503905875&amp;amp;sr=8-1&amp;amp;keywords=cloud+native+java#customerReviews&#34;&gt;on Amazon&lt;/a&gt; and wherever fine books are sold!&lt;/p&gt;
 
 &lt;p&gt;It&amp;rsquo;s been a long journey but we&amp;rsquo;re so glad to see the finish line and we hope you dig it too.&lt;/p&gt;
+
+&lt;p&gt;The book covers the latest-and-greatest revision of Spring Boot, Spring Cloud, Spring Cloud Data Flow and Cloud Foundry and looks at how to pull them together. It&amp;rsquo;s been reviewed by too many amazing engineers from the Spring team and Cloud Foundry teams to count.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;d like to thank, especially, Spring founder Dr. Rod Johnson, Cloud Foundry legend James Watters and Spring Boot and Spring Cloud co-founder Dr. David Syer for their kind words, all of which are  also in the book.&lt;/p&gt;
 </description>
     </item>
     
@@ -31,8 +35,7 @@
 
 &lt;p&gt;The bird pictured, for those of you wondering, is a &lt;a href=&#34;https://en.wikipedia.org/wiki/Blue-eared_kingfisher&#34;&gt;Blue-Eared Kingfisher&lt;/a&gt; from the island of Java.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://akamaicovers.oreilly.com/images/0636920038252/lrg.jpg&#34; alt=&#34;Cloud Native Java&#34; title=&#34;O&#39;Reilly&#39;s Cloud Native Java book&#34; /&gt;
-&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://akamaicovers.oreilly.com/images/0636920038252/lrg.jpg&#34; alt=&#34;Cloud Native Java&#34; title=&#34;O&#39;Reilly&#39;s Cloud Native Java book&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
