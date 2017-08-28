@@ -6,8 +6,20 @@
     <description>Recent content in Posts on Cloud Native Java</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Aug 2015 17:18:18 -0700</lastBuildDate>
+    <lastBuildDate>Mon, 28 Aug 2017 17:16:51 -5500</lastBuildDate>
     <atom:link href="http://cloudnativejava.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Welcome!</title>
+      <link>http://cloudnativejava.io/post/cloud_native_java_is_done/</link>
+      <pubDate>Mon, 28 Aug 2017 17:16:51 -5500</pubDate>
+      
+      <guid>http://cloudnativejava.io/post/cloud_native_java_is_done/</guid>
+      <description>&lt;p&gt;After just a bit more than two years since the original post to this portal went up, we&amp;rsquo;re pleased to say that &lt;em&gt;Cloud Native Java&lt;/em&gt; is now available! It&amp;rsquo;s &lt;a href=&#34;https://www.amazon.com/Cloud-Native-Java-Designing-Resilient/dp/1449374646/ref=sr_1_1?ie=UTF8&amp;amp;qid=1503905875&amp;amp;sr=8-1&amp;amp;keywords=cloud+native+java#customerReviews&#34;&gt;on Amazon&lt;/a&gt; and wherever fine books are sold!&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s been a long journey but we&amp;rsquo;re so glad to see the finish line and we hope you dig it too.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Welcome!</title>
