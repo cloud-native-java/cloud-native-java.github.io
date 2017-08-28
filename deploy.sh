@@ -22,5 +22,5 @@ git commit -m "$msg"
 git push origin source
 # git subtree push  --prefix=public git@github.com:cloud-native-java/cloud-native-java.github.io.git master
 
-gss=`git subtree split --prefix public source`
-git push public $gss:master --force
+
+git push public `git subtree split --prefix public source`:master --force
