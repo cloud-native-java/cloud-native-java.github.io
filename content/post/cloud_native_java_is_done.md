@@ -1,8 +1,8 @@
 +++
 date = "2017-08-28T17:16:51-55:00"
 draft = false
-title = "Welcome!"
-description = "Cloud Native Java is Finished!"
+title = "Cloud Native Java is Finished!"
+description = "It took a long time, but _Cloud Native Java_ is done. We hope you enjoy it."
 
 +++
 
