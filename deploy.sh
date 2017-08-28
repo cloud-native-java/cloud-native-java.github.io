@@ -18,6 +18,10 @@ fi
 git commit -m "$msg"
 
 # Push source and build repos.
-git pull origin source
+# git pull origin source
 git push origin source
-git subtree push  --prefix=public git@github.com:cloud-native-java/cloud-native-java.github.io.git master
+# git subtree push  --prefix=public git@github.com:cloud-native-java/cloud-native-java.github.io.git master
+
+gss=`git subtree split --prefix public master`
+echo $gss
+# git push heroku ``:master --force
