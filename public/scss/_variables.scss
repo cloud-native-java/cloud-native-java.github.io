@@ -1,23 +1,18 @@
-$gray-lightest:     #F8F8F8;
-$gray-lighter:      #EEEEEE;
-$gray-light:        #DDDDDD;
-$gray:              #CCCCCC;
-$gray-dark:         #999999;
-$gray-darker:       #666666;
-$gray-darkest:      #333333;
+// Variables
 
-$green:             #156F78;
-$purple:            #493252;
-$red:               #E25440;
-$slate:             #3D4260;
+// Gray and Brand Colors for use across theme
 
-$primary-color:     $slate;
-$secondary-color:   #5BA4E5;
+$theme-primary:    #fdcc52;
+$theme-secondary:  #7b4397;
+$theme-tertiary:   #dc2430;
 
-$link-color:        $primary-color;
-$hover-color:       darken($link-color, 15%);
+$gray-base:        #000;
+$gray-darker:      lighten($gray-base, 13.5%); // #222
+$gray-dark:        lighten($gray-base, 20%);   // #333
+$gray:             lighten($gray-base, 33.5%); // #555
+$gray-light:       lighten($gray-base, 46.7%); // #777
+$gray-lighter:     lighten($gray-base, 93.5%); // #eee
 
-$sans-font:        'Ubuntu', sans-serif;
-$serif-font:        'Source Serif Pro', serif;
-
-$border-radius:     3px;
+$brand-twitter:		#1da1f2;
+$brand-facebook:	#3b5998;
+$brand-google-plus:	#dd4b39;
